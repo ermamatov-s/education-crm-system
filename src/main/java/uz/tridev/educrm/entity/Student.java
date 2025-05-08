@@ -1,3 +1,4 @@
+/*
 package uz.tridev.educrm.entity;
 
 import jakarta.persistence.Entity;
@@ -12,12 +13,11 @@ import java.time.LocalDate;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class Student extends User {
+public class Student extends Users {
 
     private LocalDate birthDate;
     private String parentPhone;
 
-    @OneToOne(optional = false)
-    @JoinColumn(name = "user_id", nullable = false, unique = true)
-    private User user;
+
 }
+*/
