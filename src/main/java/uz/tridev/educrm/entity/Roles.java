@@ -3,17 +3,19 @@ package uz.tridev.educrm.entity;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;
-import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 import org.springframework.security.core.GrantedAuthority;
 import uz.tridev.educrm.entity.enums.RoleName;
 
 @AllArgsConstructor
 @NoArgsConstructor
+@Getter
+@Setter
 @Entity
-@Table(name = "roles")
-public class Role extends BaseEntity implements GrantedAuthority {
+public class Roles extends BaseEntity implements GrantedAuthority {
 
     @Enumerated(EnumType.STRING)
     private RoleName roleName;

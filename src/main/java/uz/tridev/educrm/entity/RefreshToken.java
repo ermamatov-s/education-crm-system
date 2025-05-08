@@ -1,9 +1,6 @@
 package uz.tridev.educrm.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.EnumType;
-import jakarta.persistence.Enumerated;
-import jakarta.persistence.ManyToOne;
+import jakarta.persistence.*;
 import lombok.*;
 import uz.tridev.educrm.entity.enums.TokenType;
 
@@ -14,7 +11,7 @@ import uz.tridev.educrm.entity.enums.TokenType;
 @Setter
 @Builder
 @Entity
-public class Token extends BaseEntity {
+public class RefreshToken extends BaseEntity {
 
     private String token;
 
@@ -25,5 +22,5 @@ public class Token extends BaseEntity {
     private boolean revoked;
 
     @ManyToOne
-    private User user;
+    private Users user;
 }
